@@ -73,8 +73,8 @@
         <noscript>
             <ul class="nav-items" data-astro-cid-dmqpwcec>
                 <li data-astro-cid-dmqpwcec> <a aria-current="true" class="link active" href="index.html" data-astro-cid-dmqpwcec> Home </a> </li>
-                <li data-astro-cid-dmqpwcec> <a class="link" href="./work/index.html" data-astro-cid-dmqpwcec> mes Projets </a> </li>
-                <li data-astro-cid-dmqpwcec> <a class="link" href="./about/index.html" data-astro-cid-dmqpwcec> A propos de moi</a> </li>
+                <li data-astro-cid-dmqpwcec> <a class="link" href="./work/index.html" data-astro-cid-dmqpwcec> Work </a> </li>
+                <li data-astro-cid-dmqpwcec> <a class="link" href="./about/index.html" data-astro-cid-dmqpwcec> About </a> </li>
             </ul>
         </noscript>
         <noscript>
@@ -248,5 +248,18 @@
         <p class="socials" data-astro-cid-sz7xmlte> <a href="https://www.instagram.com/rabah.o23/" data-astro-cid-sz7xmlte> instagram</a> <a href="https://github.com/Rythwin23" data-astro-cid-sz7xmlte> github</a> </p>
     </footer>
 </div>
+<script>
+    // Vérifie si le compteur de visites existe déjà
+    if (localStorage.getItem('visitCount')) {
+        // Si oui, incrémente le compteur
+        localStorage.setItem('visitCount', parseInt(localStorage.getItem('visitCount')) + 1);
+    } else {
+        // Si non, initialise le compteur à 1
+        localStorage.setItem('visitCount', 1);
+    }
+
+    // Affiche le nombre de visites dans la console (ou ailleurs sur la page si nécessaire)
+    console.log('Nombre de visites:', localStorage.getItem('visitCount'));
+</script>
 </body>
 </html>
