@@ -189,7 +189,7 @@ header[data-astro-cid-qwekciqp]{padding-bottom:2.5rem;border-bottom:1px solid va
                             </video>
                         </div>
                     </section>
-                    <div class="content" data-astro-cid-qwekciqp>
+                    <div class="content" data-astro-cid-qwekciqp style="border: 1px solid #ccc; padding: 16px; border-radius: 8px;">
                         <p>Le problème du voyageur de commerce (TSP) est un problème classique
                             en optimisation combinatoire, avec des applications dans divers domaines
                             tels que la logistique, la planification des tournées, et la conception de circuits électroniques. L’objectif principal du TSP est de trouver le chemin le
@@ -197,6 +197,40 @@ header[data-astro-cid-qwekciqp]{padding-bottom:2.5rem;border-bottom:1px solid va
                             départ. L’algorithme génétique (AG) est une technique d’optimisation inspirée par la théorie de l’évolution biologique, qui peut être appliquée avec
                             succès à la résolution du TSP.
                         </p>
+                        <h3>Étapes de l'algorithme</h3>
+                        <ul>
+                            <li>
+                                <h5>Représentation des solutions (individus)</h5>
+                                <p>Chaque individu (solution) est généralement représenté par une permutation des villes. Par exemple, si nous avons 5 villes, une solution pourrait être [2, 4, 1, 3, 5].</p>
+                            </li>
+                            <li>
+                                <h5>Initialisation de la population</h5>
+                                <p>Créer une population initiale de solutions aléatoires.</p>
+                            </li>
+                            <li>
+                                <h5>Évaluation (fonction de fitness)</h5>
+                                <p>Calculer la distance totale parcourue pour chaque solution. L'objectif est de minimiser cette distance.</p>
+                            </li>
+                            <li>
+                                <h5>Sélection</h5>
+                                <p>Sélectionner les individus pour la reproduction. La méthode utilisée consiste à  classer
+                                    les solutions selon leur score de fitness et attribuer des chances de reproductions
+                                    selon l'ordre dans le classement, plus l'individu est haut dans le classement et plus il pourra
+                                    se reproduire.</p>
+                            </li>
+                            <li>
+                                <h5>Croisement (crossover)</h5>
+                                <p>Combiner deux solutions pour créer une nouvelle solution. Les opérateurs de croisement spécifiques pour les permutations incluent le croisement en cycle (cycle crossover) et le croisement partiellement ordonné (partially mapped crossover).</p>
+                            </li>
+                            <li>
+                                <h5>Mutation</h5>
+                                <p>Appliquer des mutations pour introduire de la diversité. Par exemple, échanger deux villes dans la permutation.</p>
+                            </li>
+                            <li>
+                                <h5>Remplacement</h5>
+                                <p>Remplacer une partie de la population par les nouveaux individus générés.</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </main>
